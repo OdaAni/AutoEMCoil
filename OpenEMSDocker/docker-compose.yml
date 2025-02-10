@@ -1,0 +1,12 @@
+version: '3'
+services:
+  # Define our OpenEMS service
+  openems:
+    # Build using the Dockerfile in the current directory
+    build: .
+    # Mount the local directory to /app in the container
+    # This means your files will be accessible inside the container
+    volumes:
+      - .:/app
+    # Set the working directory inside the container
+    working_dir: /app
